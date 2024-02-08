@@ -1,0 +1,81 @@
+1. What are the five V’s of Big Data
+Ans: Volume, Velocity, Varirty, Veracity, Value
+
+2. Explain the steps to be followed to deploy a Big Data solution
+Ans: Define Objectives and Requirements:
+Clearly define the goals and objectives of your Big Data solution.
+Assess Data Sources:
+Identify and assess the data sources that will be integrated into the Big Data solution.
+Choose the Right Technologies:
+Select appropriate Big Data technologies based on your objectives and requirements.
+Design Data Architecture:
+Develop a robust data architecture that accommodates the storage, processing, and analysis of the data.
+
+3. Define respective components of HDFS and YARN?
+Ans: Hadoop Distributed File System(HDFS):
+NameNode, DataNode, Secondary NameNode, Block.
+Yet Another Resource Negotiator (YARN):
+ResourceManager, NodeManager, ApplicationMaster, Container.
+
+4. What happens when two users try to access the same file in the HDFS?
+Ans:In Hadoop Distributed File System (HDFS), when two users try to access the same file concurrently, the behavior largely depends on the nature of the operations they are performing. HDFS provides a distributed and parallel storage system, and its behavior in concurrent file.
+
+
+5. What is the difference between “HDFS Block” and “Input Split”?
+Ans:HDFS Block:
+Purpose: HDFS divides large files into fixed-size blocks for storage and distribution across the nodes in a Hadoop cluster.
+Size: By default, HDFS blocks are typically set to a size of 128 MB or 256 MB, although this size is configurable.
+Storage: Each block is stored independently on different DataNodes in the Hadoop cluster to provide fault tolerance and parallel processing capabilities.
+Replication: HDFS replicates each block multiple times (usually three by default) across the cluster to ensure data durability and availability.
+Parallelism: During data processing, each block can be processed in parallel by different nodes in the cluster, enhancing the overall performance.
+
+Input Split:
+Purpose: Input splits are a concept related to the processing phase in the Hadoop MapReduce framework. They represent a logical division of the data to be processed by individual Mapper tasks.
+Size: Input splits are generally smaller than HDFS blocks. They are determined based on the data blocks in HDFS but can be smaller, especially if the data is not evenly distributed.
+Storage: Input splits do not represent physical storage; they are logical divisions of data designed for parallel processing by Mapper tasks.
+Replication: Input splits don't involve replication as they are a logical concept within the MapReduce framework. Replication is a property of HDFS blocks.
+Parallelism: Each input split is processed independently by a separate Mapper task, enabling parallel processing of data across the cluster.
+
+6. What are the common input formats in Hadoop?
+Ans:TextInput, KeyValueTextInput, SequenceFileInput, NLineInput, Custom Input,CombineFileInput.
+ 
+7.Explain some important features of Hadoop?
+Ans: Distributed Storage:
+Description: Hadoop's Distributed File System (HDFS) allows the storage of large datasets across multiple nodes in a cluster.
+Significance: This enables high-throughput access to data and fault tolerance since each piece of data is replicated across the cluster.
+
+Scalability:
+Description: Hadoop scales horizontally, meaning you can add more nodes to the cluster to handle increasing data volumes and processing requirements.
+Significance: Scalability ensures that Hadoop can efficiently handle the growth of data and workloads in a cost-effective manner.
+
+Fault Tolerance:
+Description: Hadoop is designed to handle hardware failures gracefully. It replicates data across multiple nodes, and if a node fails, tasks are rerouted to other nodes.
+Significance: Fault tolerance ensures that the system continues to operate smoothly even in the presence of hardware failures.
+
+Open Source:
+Description: Hadoop is an open-source framework maintained by the Apache Software Foundation. It is freely available and can be modified to meet specific requirements.
+Significance: The open-source nature promotes collaboration, innovation, and a large ecosystem of tools and applications around the Hadoop ecosystem.
+
+8.What could you consider to improve BigQuery performance for queries that use filters or aggregation against particular columns?
+What steps do you need to take to set up BigQuery before use?
+When you run a query in BigQuery, what happens to the results?
+What are some ways to help control costs in BigQuery?
+What is a federated data source?
+What are the differences between structured and unstructured data
+What is HDFS
+What is the difference between Spark and MapReduce
+Mention the types of Variables in Scala? And What is the difference between them?
+Mention the Advantages of Scala
+What is the Recursion tail in Scala?
+What is a Closure?
+What is RDD
+What is Lazy evaluated
+What are Partitions?
+How does spark partition the data?
+What is SparkContext?
+How is SparkSQL different from HQL and SQL?
+Why are Partitions immutable?
+What are broadcast variables?
+What are Accumulators in Spark?
+What are the various functions of Spark Core?
+What do you understand by the Parquet file?
